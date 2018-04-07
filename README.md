@@ -1,2 +1,6 @@
-# code_test
-use for code test
+# 주소록
+
+- 등록
+- 수정
+- 삭제
+- 목록
