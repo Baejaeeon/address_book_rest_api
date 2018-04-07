@@ -1,4 +1,4 @@
-package com.example.demo.process.comtroller;
+package com.example.demo.process.controller;
 
 import java.util.List;
 
