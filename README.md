@@ -11,7 +11,7 @@
 # 2. 주소록 테스트
 
 * com.example.demo.process.contact 패키지
-  * postman 툴을 사용해서 테스트
+  * postman 툴을 사용해서 테스트
   * 등록 : 서버 구동 후, /contact/createContact post방식으로 파라미터 입력 후 실행
   * 수정 : 수정할	ID를 파라미터로	입력 후,	/contact/modifyContact 실행
   * 삭제 : 삭제할	ID를 파라미터로	입력 후,	/contact/removeContact 실행
