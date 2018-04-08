@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="randomNumber">
+
+	<insert id="insertRandomNumber" parameterType="com.example.demo.process.randomnumber.domain.RandomNumber">
+	  /* 0.1초 주기로 랜덤 정수를 등록한다. */
+	  INSERT INTO MASTER (
+	  	random_number
+	  	, registered_datetime
+	  ) VALUES (
+	    #{random_number}
+	    , #{registered_datetime}
+	  )
+	</insert>
+	
+	<select id="selectRandomNumberList" resultType="com.example.demo.process.randomnumber.domain.RandomNumber" parameterType="com.example.demo.process.randomnumber.domain.RandomNumber">
+	  /* 넘겨 받은 random_number_id의 조건에 해당하는 목록을 반환한다. */
+	  SELECT
+	    m.random_number_id
+	    , m.random_number
+	    , m.registered_datetime
+	  FROM
+	    `MASTER` AS m
+	  WHERE
+	    <![CDATA[
+	    m.random_number_id > #{random_number_id}
+	    ]]> 
+	</select>
+	
+	<select id="selectRandomNumberCount" resultType="java.lang.Integer">
+	  /* backup DB에 저장된 개수를 가져온다. */
+	  SELECT
+	    COUNT(*)
+	  FROM
+	    `BACKUP` AS b
+	</select>
+	
+	<select id="selectMaxRandomNumber" resultType="java.lang.Integer">
+	  /* 가장 마지막의 random_number_id를 가져온다. */
+	  SELECT
+	    MAX(b.random_number_id)
+	  FROM
+	    `BACKUP` AS b
+	</select>
+	
+	<select id="insertRandomNumberToBackup" parameterType="com.example.demo.process.randomnumber.domain.RandomNumber">
+	  /* 넘겨 받은 master 테이블의 데이터를 backup 테이블에 등록한다. */
+	  INSERT INTO BACKUP (
+	    random_number_id
+	    , random_number
+	    , registered_datetime
+	  ) VALUES (
+	    #{random_number_id}
+	    , #{random_number}
+	    , #{registered_datetime}
+	  )
+	</select>
+	
+</mapper>

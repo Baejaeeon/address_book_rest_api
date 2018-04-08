@@ -4,7 +4,7 @@
 
 <mapper namespace="contact">
 
-	<insert id="insertContact" parameterType="com.example.demo.process.domain.Contact">
+	<insert id="insertContact" parameterType="com.example.demo.process.contact.domain.Contact">
 	  /* 주소록을 등록한다. */
 	  INSERT INTO CONTACT(
 	    name
@@ -21,7 +21,7 @@
 	  )
 	</insert>
 	
-	<select id="selectContactList" resultType="com.example.demo.process.domain.Contact" parameterType="com.example.demo.process.domain.Contact">
+	<select id="selectContactList" resultType="com.example.demo.process.contact.domain.Contact" parameterType="com.example.demo.process.contact.domain.Contact">
 	  /* 주소록 목록을 가져온다. */
 	  SELECT
 	    c.contact_id
@@ -35,7 +35,7 @@
 	    CONTACT AS c
 	</select>
 	
-	<update id="updateContact" parameterType="com.example.demo.process.domain.Contact">
+	<update id="updateContact" parameterType="com.example.demo.process.contact.domain.Contact">
 	  /* 해당 주소록 ID의 주소록 데이러틀 수정 한다. */
 	  UPDATE CONTACT
 	  SET
@@ -48,14 +48,14 @@
 	    contact_id = #{contact_id}
 	</update>
 	
-	<delete id="deleteContact" parameterType="com.example.demo.process.domain.Contact">
+	<delete id="deleteContact" parameterType="com.example.demo.process.contact.domain.Contact">
 	  /* 해당 주소록 ID의 주소록 데이터를 삭제한다. */
 	  DELETE FROM CONTACT
 	  WHERE
 	    contact_id = #{contact_id}
 	</delete>
 	
-	<select id="contactDetail" resultType="com.example.demo.process.domain.Contact" parameterType="com.example.demo.process.domain.Contact">
+	<select id="contactDetail" resultType="com.example.demo.process.contact.domain.Contact" parameterType="com.example.demo.process.contact.domain.Contact">
 	  /* 해당 ID에 속하는 주소록 상세정보를 가져온다. */
 	  SELECT
 	    c.contact_id

@@ -1,4 +1,4 @@
-package com.example.demo.process.comtroller;
+package com.example.demo.process.contact.controller;
 
 import java.util.List;
 
@@ -10,8 +10,8 @@ import org.springframework.web.bind.ServletRequestUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.process.domain.Contact;
-import com.example.demo.process.service.ContactService;
+import com.example.demo.process.contact.domain.Contact;
+import com.example.demo.process.contact.service.ContactService;
 import com.google.gson.Gson;
 
 

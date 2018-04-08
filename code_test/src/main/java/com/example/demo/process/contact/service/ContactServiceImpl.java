@@ -1,12 +1,12 @@
-package com.example.demo.process.service;
+package com.example.demo.process.contact.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.demo.process.dao.ContactDao;
-import com.example.demo.process.domain.Contact;
+import com.example.demo.process.contact.dao.ContactDao;
+import com.example.demo.process.contact.domain.Contact;
 
 /**
  * 주소록 Service 클래스
