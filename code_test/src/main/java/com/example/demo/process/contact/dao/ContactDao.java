@@ -1,8 +1,8 @@
-package com.example.demo.process.dao;
+package com.example.demo.process.contact.dao;
 
 import java.util.List;
 
-import com.example.demo.process.domain.Contact;
+import com.example.demo.process.contact.domain.Contact;
 
 /**
  * 주소록 Dao 인터페이스

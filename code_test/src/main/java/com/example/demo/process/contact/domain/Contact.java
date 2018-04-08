@@ -1,4 +1,4 @@
-package com.example.demo.process.domain;
+package com.example.demo.process.contact.domain;
 
 /**
  * 주소록 도메인

@@ -1,4 +1,4 @@
-package com.example.demo.process.dao;
+package com.example.demo.process.contact.dao;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.process.domain.Contact;
+import com.example.demo.process.contact.domain.Contact;
 
 /**
  * 주소록 Dao 클래스
