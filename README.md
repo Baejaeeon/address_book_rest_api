@@ -1,7 +1,7 @@
 # 1. 랜덤 넘버 소켓 통신 테스트
 
 * com.example.demo.process.randomnumber 패키지
-  * 스케줄링 작업
+  * 스케줄링 작업
 
 
 
