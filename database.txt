@@ -1,0 +1,36 @@
+toma 데이터베이스 밑에 아래와 같은 테이블 생성
+
+/* 주소록 테이블 */
+
+CREATE TABLE `CONTACT` (
+	`contact_id` INT(255) NOT NULL AUTO_INCREMENT COMMENT '주소록 식별자 ID',
+	`name` VARCHAR(50) NOT NULL COMMENT '이름',
+	`phone_number` VARCHAR(13) NULL COMMENT '휴대전화번호',
+	`email` VARCHAR(50) NULL COMMENT '이메일',
+	`address` VARCHAR(100) NULL COMMENT '주소',
+	`registered_datetime` DATETIME NOT NULL COMMENT '등록일시',
+	`last_updated_datetime` DATETIME NULL COMMENT '변경일시',
+	PRIMARY KEY (`contact_id`)
+)
+COMMENT='주소록 테이블'
+;
+
+/* 마스터 테이블 */
+CREATE TABLE `MASTER` (
+	`random_number_id` INT(255) NOT NULL AUTO_INCREMENT COMMENT '랜덤 번호 식별자 ID',
+	`random_number` INT(255) NOT NULL DEFAULT '0' COMMENT '랜덤 번호',
+	`registered_datetime` TIMESTAMP NOT NULL DEFAULT '0' COMMENT '등록일시',
+	PRIMARY KEY (`random_number_id`)
+)
+COMMENT='마스터 테이블'
+;
+
+
+/* 백업 테이블 */
+CREATE TABLE `BACKUP` (
+	`random_number_id` INT(255) NULL COMMENT '백업 식별자 ID',
+	`random_number` INT(255) NULL COMMENT '백업 랜덤 번호',
+	`registerd_datetime` TIMESTAMP NULL COMMENT '등록일시'
+)
+COMMENT='백업 테이블'
+;
