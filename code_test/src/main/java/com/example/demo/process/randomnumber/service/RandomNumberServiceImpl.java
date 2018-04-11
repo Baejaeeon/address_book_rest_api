@@ -54,7 +54,7 @@ public class RandomNumberServiceImpl implements RandomNumberService {
 	 * 1초 주기로 master DB에 있는 데이터를 전송 
 	 */
 	@Override
-	@Scheduled(fixedDelayString = "1000")
+	//@Scheduled(fixedDelayString = "1000")
 	public void sendToData() throws Exception {
 		System.out.println("진입");
 		
