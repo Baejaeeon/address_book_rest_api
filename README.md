@@ -5,7 +5,7 @@
   * 한 프로그램에서 createRandomNumber 실행 및 sendToData 실행
   * 다른 프로그램에서 createDateFromMaster 실행 후, sendToData와 createDateFromMaster 소켓 통신
 
-
+----> 소켓 통신은 java_program repository를 확인하시면 됩니다.
 
 
 # 2. 주소록 테스트
