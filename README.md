@@ -19,4 +19,4 @@
   * 상세 : 검색할	ID를 파라미터로	입력 후, /contact/contactDetail 실행
 
 * contact DB ERD
-![contact_erd](/.image/contact_erd.png)
+  ![contact_erd](./image/contact_erd.png)
