@@ -17,3 +17,6 @@
   * 삭제 : 삭제할	ID를 파라미터로	입력 후,	/contact/removeContact 실행
   * 목록 : /contact/contactList 실행
   * 상세 : 검색할	ID를 파라미터로	입력 후, /contact/contactDetail 실행
+
+* contact DB ERD
+![contact_erd](/.image/contact_erd.png)
