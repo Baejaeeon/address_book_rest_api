@@ -20,4 +20,3 @@
 
 * contact DB ERD
 ![contact_erd](./image/contact_erd.PNG)
-
